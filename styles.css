@@ -241,6 +241,7 @@ html.reveal-enabled [data-reveal].is-visible {
 .hero__copy h1 {
   font-size: clamp(2.9rem, 5.1vw, 5.7rem);
   line-height: 0.95;
+  word-break: keep-all;
 }
 
 .hero__description,
@@ -884,7 +885,19 @@ html.reveal-enabled [data-reveal].is-visible {
     padding-top: 14px;
   }
 
-  .site-header__actions,
+  .site-header {
+    gap: 16px;
+    padding: 16px;
+    justify-items: stretch;
+  }
+
+  .site-header__actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
   .hero__cta,
   .application-form__actions,
   .application-panel__actions,
@@ -893,7 +906,12 @@ html.reveal-enabled [data-reveal].is-visible {
     align-items: stretch;
   }
 
-  .site-header__actions .button,
+  .site-header__actions .button {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 12px;
+  }
+
   .hero__cta .button,
   .application-form__actions .button,
   .application-panel__actions .button {
@@ -906,7 +924,8 @@ html.reveal-enabled [data-reveal].is-visible {
   }
 
   .hero__copy h1 {
-    font-size: clamp(2.45rem, 12vw, 3.65rem);
+    font-size: clamp(2.05rem, 9.8vw, 2.8rem);
+    line-height: 1.04;
   }
 
   .hero__notes {
